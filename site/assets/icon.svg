@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#9a6634"/>
+      <stop offset="1" stop-color="#6f4520"/>
+    </linearGradient>
+  </defs>
+  <rect x="64" y="64" width="896" height="896" rx="200" fill="url(#bg)"/>
+  <!-- Libro abierto -->
+  <path d="M512 330 C 440 280 320 270 230 290 L 230 720 C 320 700 440 710 512 760 Z" fill="#fbf6ee"/>
+  <path d="M512 330 C 584 280 704 270 794 290 L 794 720 C 704 700 584 710 512 760 Z" fill="#f1e4d3"/>
+  <path d="M512 330 L 512 760" stroke="#c9a77f" stroke-width="10"/>
+  <!-- Líneas de texto -->
+  <g stroke="#c9a77f" stroke-width="16" stroke-linecap="round">
+    <line x1="290" y1="400" x2="450" y2="415"/>
+    <line x1="290" y1="470" x2="450" y2="485"/>
+    <line x1="290" y1="540" x2="420" y2="553"/>
+    <line x1="574" y1="415" x2="734" y2="400"/>
+    <line x1="574" y1="485" x2="734" y2="470"/>
+  </g>
+  <!-- Pluma -->
+  <path d="M600 610 L 760 450 C 790 420 830 430 820 470 L 660 640 Z" fill="#2a2723"/>
+  <path d="M600 610 L 585 660 L 632 645 Z" fill="#2a2723"/>
+</svg>

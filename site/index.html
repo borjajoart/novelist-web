@@ -1,0 +1,444 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'none'; img-src 'self'; style-src 'self'; script-src 'self'; font-src 'self'; base-uri 'none'; form-action 'none'"
+    />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <title>Novelist · Un lugar tranquilo para escribir tu libro</title>
+    <meta
+      name="description"
+      content="Novelist es una aplicación de escritorio gratuita para Windows y Mac para escribir libros: manuscrito, tarjetas, fichas de personajes, objetivos y exportación a Word, PDF y EPUB."
+    />
+    <meta name="theme-color" content="#f7f2ea" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#1c1814" media="(prefers-color-scheme: dark)" />
+    <meta name="color-scheme" content="light dark" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:title" content="Novelist · Un lugar tranquilo para escribir tu libro" />
+    <meta
+      property="og:description"
+      content="Aplicación de escritorio para escribir libros: manuscrito, planificación, fichas y exportación. Para Windows y Mac."
+    />
+    <meta
+      property="og:image"
+      content="https://borjajoart.github.io/novelist-web/assets/capturas/04-ventana-principal.jpg"
+    />
+    <meta property="og:url" content="https://borjajoart.github.io/novelist-web/" />
+    <link rel="canonical" href="https://borjajoart.github.io/novelist-web/" />
+    <link rel="icon" href="assets/icon.svg" type="image/svg+xml" />
+    <link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png" />
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <a class="saltar" href="#contenido">Saltar al contenido</a>
+
+    <header class="cabecera">
+      <div class="contenedor cabecera__fila">
+        <a class="marca" href="#inicio" aria-label="Novelist, ir al inicio">
+          <img src="assets/icon.svg" alt="" width="32" height="32" />
+          <span>Novelist</span>
+        </a>
+        <nav aria-label="Principal">
+          <ul class="menu">
+            <li><a href="#funciones">Funciones</a></li>
+            <li><a href="#seguridad">Tus textos, a salvo</a></li>
+            <li><a href="#manuales">Manuales</a></li>
+            <li><a class="boton boton--pequeno" href="#descargar">Descargar</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="contenido">
+      <section class="portada" id="inicio" aria-labelledby="titulo">
+        <div class="contenedor portada__rejilla">
+          <div class="portada__texto">
+            <p class="etiqueta">Gratis · Windows y Mac · Sin conexión</p>
+            <h1 id="titulo">Un lugar tranquilo para escribir tu libro</h1>
+            <p class="entradilla">
+              Novelist reúne el manuscrito, la planificación, los personajes y la exportación final en una sola
+              aplicación. Escribe sin distracciones: todo se guarda solo y tus textos nunca salen de tu ordenador.
+            </p>
+            <div class="acciones">
+              <a class="boton" href="#descargar" id="boton-principal">Descargar Novelist</a>
+              <a class="boton boton--secundario" href="#funciones">Ver qué puede hacer</a>
+            </div>
+            <p class="nota-pequena" id="nota-sistema">Versión 0.1.0 · Windows 10/11 y Mac con chip de Apple</p>
+          </div>
+          <figure class="captura captura--portada">
+            <img
+              src="assets/capturas/04-ventana-principal.jpg"
+              width="1264"
+              height="735"
+              alt="Ventana principal de Novelist: a la izquierda el árbol del libro con capítulos y escenas, en el centro el texto de la escena «El puerto» y a la derecha su sinopsis, estado y punto de vista."
+              fetchpriority="high"
+            />
+          </figure>
+        </div>
+      </section>
+
+      <section class="seccion" id="funciones" aria-labelledby="funciones-titulo">
+        <div class="contenedor">
+          <h2 id="funciones-titulo">Todo lo que necesita un libro</h2>
+          <p class="seccion__intro">
+            Pensada para novelas, ensayos y memorias. Empieza con una plantilla o en blanco y ve dándole forma.
+          </p>
+
+          <article class="funcion">
+            <div class="funcion__texto">
+              <h3>Escribe con calma</h3>
+              <p>
+                Un editor limpio con el formato justo: títulos, cursivas, citas, listas, separadores de escena y sangría
+                de novela. El modo concentración oculta todo menos el texto, con la línea de escritura centrada y el
+                resto atenuado.
+              </p>
+              <ul class="lista-check">
+                <li>Guardado automático mientras escribes</li>
+                <li>Zoom del texto, temas claro, oscuro y sepia</li>
+                <li>Buscar y reemplazar en el capítulo o en todo el libro</li>
+              </ul>
+            </div>
+            <figure class="captura">
+              <img
+                src="assets/capturas/11-modo-concentracion.jpg"
+                width="1264"
+                height="735"
+                loading="lazy"
+                alt="Modo concentración: solo el texto en pantalla, con el párrafo actual destacado y el resto atenuado."
+              />
+            </figure>
+          </article>
+
+          <article class="funcion funcion--invertida">
+            <div class="funcion__texto">
+              <h3>Organiza el libro como quieras</h3>
+              <p>
+                Partes, capítulos y escenas en un árbol que reordenas arrastrando. Mira el libro como un tablero de
+                tarjetas o como un esquema con sinopsis, estado, punto de vista y lugar de cada escena.
+              </p>
+              <ul class="lista-check">
+                <li>Tarjetas que se arrastran para cambiar el orden</li>
+                <li>Esquema editable con filtros por estado</li>
+                <li>Colecciones para agrupar sin mover nada</li>
+              </ul>
+            </div>
+            <figure class="captura">
+              <img
+                src="assets/capturas/12-tarjetas.jpg"
+                width="1264"
+                height="735"
+                loading="lazy"
+                alt="Vista de tarjetas: cada capítulo es una ficha con su sinopsis, el personaje de punto de vista, el lugar y el número de palabras."
+              />
+            </figure>
+          </article>
+
+          <article class="funcion">
+            <div class="funcion__texto">
+              <h3>Personajes, lugares e investigación</h3>
+              <p>
+                Cada personaje y cada lugar tiene su ficha: apariencia, motivaciones, ambiente… Novelist te muestra en
+                qué escenas aparece y guarda dentro del libro las fotos, mapas o PDF que adjuntes.
+              </p>
+              <ul class="lista-check">
+                <li>Fichas con campos propios y personalizados</li>
+                <li>«Aparece en»: escenas de cada personaje o lugar</li>
+                <li>Adjuntos con miniaturas y sin duplicados</li>
+              </ul>
+            </div>
+            <figure class="captura">
+              <img
+                src="assets/capturas/14-ficha-personaje.jpg"
+                width="1264"
+                height="735"
+                loading="lazy"
+                alt="Ficha del personaje Marta con alias, edad, apariencia, personalidad y motivaciones."
+              />
+            </figure>
+          </article>
+
+          <article class="funcion funcion--invertida">
+            <div class="funcion__texto">
+              <h3>Revisa sin miedo</h3>
+              <p>
+                Deja comentarios sobre el texto, resalta lo que quieras revisar y crea instantáneas antes de reescribir
+                una escena. Compara versiones palabra a palabra y vuelve atrás cuando quieras.
+              </p>
+              <ul class="lista-check">
+                <li>Comentarios de revisión que se marcan como resueltos</li>
+                <li>Instantáneas con comparación de cambios</li>
+                <li>Listas de tareas en las notas</li>
+              </ul>
+            </div>
+            <figure class="captura">
+              <img
+                src="assets/capturas/09-comentarios.jpg"
+                width="1264"
+                height="735"
+                loading="lazy"
+                alt="Una escena con una frase resaltada y un comentario de revisión en el panel lateral."
+              />
+            </figure>
+          </article>
+
+          <article class="funcion">
+            <div class="funcion__texto">
+              <h3>Del borrador al libro</h3>
+              <p>
+                Exporta el manuscrito a Word, PDF listo para imprimir, EPUB, Markdown o texto. Elige portada, página de
+                título, índice, tamaño de página y tipografía, y míralo en la vista previa antes de guardarlo.
+              </p>
+              <ul class="lista-check">
+                <li>Cinco formatos de exportación</li>
+                <li>Importa tus borradores de Word, Markdown o TXT</li>
+                <li>Objetivos diarios y gráfica de progreso</li>
+              </ul>
+            </div>
+            <figure class="captura">
+              <img
+                src="assets/capturas/19-compilar.jpg"
+                width="1024"
+                height="625"
+                loading="lazy"
+                alt="Ventana de compilar y exportar: formato PDF elegido, capítulos marcados, portada y vista previa con el título y el índice."
+              />
+            </figure>
+          </article>
+
+          <h3 class="galeria__titulo">Más funciones</h3>
+          <ul class="galeria">
+            <li>
+              <figure class="captura">
+                <img
+                  src="assets/capturas/13-esquema.jpg"
+                  width="1264"
+                  height="735"
+                  loading="lazy"
+                  alt="Esquema del manuscrito en forma de tabla."
+                />
+                <figcaption>Esquema del libro</figcaption>
+              </figure>
+            </li>
+            <li>
+              <figure class="captura">
+                <img
+                  src="assets/capturas/18-progreso.jpg"
+                  width="768"
+                  height="503"
+                  loading="lazy"
+                  alt="Progreso: palabras del libro, de hoy y de la sesión, con una gráfica diaria."
+                />
+                <figcaption>Objetivos y progreso</figcaption>
+              </figure>
+            </li>
+            <li>
+              <figure class="captura">
+                <img
+                  src="assets/capturas/08-busqueda-global.jpg"
+                  width="1264"
+                  height="735"
+                  loading="lazy"
+                  alt="Resultados de buscar «faro» en todo el proyecto."
+                />
+                <figcaption>Búsqueda en todo el libro</figcaption>
+              </figure>
+            </li>
+            <li>
+              <figure class="captura">
+                <img
+                  src="assets/capturas/25-tema-oscuro.jpg"
+                  width="1264"
+                  height="735"
+                  loading="lazy"
+                  alt="Novelist con el tema oscuro."
+                />
+                <figcaption>Tema oscuro</figcaption>
+              </figure>
+            </li>
+            <li>
+              <figure class="captura">
+                <img
+                  src="assets/capturas/26-tema-sepia.jpg"
+                  width="1264"
+                  height="735"
+                  loading="lazy"
+                  alt="Novelist con el tema sepia."
+                />
+                <figcaption>Tema sepia</figcaption>
+              </figure>
+            </li>
+            <li>
+              <figure class="captura">
+                <img
+                  src="assets/capturas/23-paleta.jpg"
+                  width="576"
+                  height="276"
+                  loading="lazy"
+                  alt="Paleta de comandos con resultados para «tar»."
+                />
+                <figcaption>Paleta de comandos (Ctrl+K)</figcaption>
+              </figure>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="seccion seccion--suave" id="seguridad" aria-labelledby="seguridad-titulo">
+        <div class="contenedor">
+          <h2 id="seguridad-titulo">Tus textos, a salvo</h2>
+          <p class="seccion__intro">
+            Lo más importante de un libro es no perderlo. Novelist está hecha con eso en mente.
+          </p>
+          <ul class="tarjetas">
+            <li class="tarjeta">
+              <h3>Se guarda solo</h3>
+              <p>
+                Unos instantes después de dejar de escribir. Y si el ordenador se apaga de golpe, recupera lo que
+                faltaba.
+              </p>
+            </li>
+            <li class="tarjeta">
+              <h3>Copias automáticas</h3>
+              <p>Al abrir, al cerrar y cada 15 minutos. Restaurar una copia guarda antes el estado actual.</p>
+            </li>
+            <li class="tarjeta">
+              <h3>En tu ordenador</h3>
+              <p>Sin cuentas, sin nube y sin conexión. Nada de lo que escribes sale de tu equipo.</p>
+            </li>
+            <li class="tarjeta">
+              <h3>Fácil de llevar</h3>
+              <p>Una copia completa en un solo archivo para guardarla aparte o abrirla en otro ordenador.</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="seccion" id="descargar" aria-labelledby="descargar-titulo">
+        <div class="contenedor">
+          <h2 id="descargar-titulo">Descargar Novelist</h2>
+          <p class="seccion__intro">Versión 0.1.0. Gratuita, en español y sin anuncios.</p>
+          <ul class="descargas">
+            <li class="descarga" data-sistema="windows">
+              <h3>Windows</h3>
+              <p>Windows 10 u 11 de 64 bits.</p>
+              <a
+                class="boton"
+                href="https://github.com/borjajoart/novelist-web/releases/download/v0.1.0/Novelist-0.1.0-win-x64.exe"
+              >
+                Descargar para Windows<span class="boton__detalle">.exe · TAMANO_WIN</span>
+              </a>
+            </li>
+            <li class="descarga" data-sistema="mac">
+              <h3>Mac</h3>
+              <p>macOS 12 o posterior, con chip de Apple (M1 o más reciente).</p>
+              <a
+                class="boton"
+                href="https://github.com/borjajoart/novelist-web/releases/download/v0.1.0/Novelist-0.1.0-mac-arm64.dmg"
+              >
+                Descargar para Mac<span class="boton__detalle">.dmg · TAMANO_MAC</span>
+              </a>
+            </li>
+          </ul>
+          <div class="aviso" role="note">
+            <h3>La primera vez saldrá un aviso</h3>
+            <p>
+              Esta versión aún no está firmada con un certificado de pago, así que Windows y macOS avisan de que no
+              conocen al desarrollador. Es normal y se resuelve en un par de pasos: en Windows,
+              <strong>Más información → Ejecutar de todas formas</strong>; en Mac, sigue la
+              <a href="descargas/Guia-de-instalacion.pdf">guía de instalación</a>.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="seccion seccion--suave" id="manuales" aria-labelledby="manuales-titulo">
+        <div class="contenedor">
+          <h2 id="manuales-titulo">Manuales</h2>
+          <ul class="manuales">
+            <li class="manual">
+              <img src="assets/capturas/02-nuevo-proyecto.jpg" width="448" height="427" loading="lazy" alt="" />
+              <div>
+                <h3>Guía de instalación</h3>
+                <p>
+                  Paso a paso para Windows y Mac, qué hacer con los avisos de seguridad y dónde se guardan tus libros.
+                </p>
+                <a class="enlace-descarga" href="descargas/Guia-de-instalacion.pdf" download>
+                  Descargar la guía de instalación<span class="boton__detalle">PDF · 9 páginas · 165 KB</span>
+                </a>
+              </div>
+            </li>
+            <li class="manual">
+              <img src="assets/capturas/21-copias-seguridad.jpg" width="512" height="363" loading="lazy" alt="" />
+              <div>
+                <h3>Manual de uso</h3>
+                <p>
+                  Todas las funciones explicadas con capturas: escribir, organizar, revisar, exportar y copias de
+                  seguridad.
+                </p>
+                <a class="enlace-descarga" href="descargas/Manual-de-Novelist.pdf" download>
+                  Descargar el manual de uso<span class="boton__detalle">PDF · 28 páginas · 2,0 MB</span>
+                </a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="seccion" id="preguntas" aria-labelledby="preguntas-titulo">
+        <div class="contenedor contenedor--estrecho">
+          <h2 id="preguntas-titulo">Preguntas frecuentes</h2>
+          <details>
+            <summary>¿Cuesta algo?</summary>
+            <p>No. Es gratuita, sin anuncios y sin suscripciones.</p>
+          </details>
+          <details>
+            <summary>¿Necesito internet o una cuenta?</summary>
+            <p>
+              No. Funciona sin conexión y no pide registrarse. Tus libros se guardan en la carpeta Documentos/Novelist.
+            </p>
+          </details>
+          <details>
+            <summary>¿Por qué Windows o macOS dicen que no conocen al desarrollador?</summary>
+            <p>
+              Porque esta versión no está firmada con un certificado de pago. El aviso sale con cualquier programa sin
+              firmar; la <a href="descargas/Guia-de-instalacion.pdf">guía de instalación</a> explica cómo continuar.
+            </p>
+          </details>
+          <details>
+            <summary>¿Funciona en un Mac con procesador Intel?</summary>
+            <p>
+              Esta descarga es para Mac con chip de Apple. La versión para Intel llegará con la próxima publicación.
+            </p>
+          </details>
+          <details>
+            <summary>¿Puedo llevar mi libro a otro ordenador?</summary>
+            <p>
+              Sí. Dentro del libro, «Datos y objetivos del proyecto» → «Guardar copia completa…» crea un único archivo.
+              En el otro ordenador, «Abrir copia completa…» desde la pantalla de inicio.
+            </p>
+          </details>
+          <details>
+            <summary>¿En qué formatos puedo exportar?</summary>
+            <p>Word (DOCX), PDF, EPUB, Markdown y texto plano.</p>
+          </details>
+        </div>
+      </section>
+    </main>
+
+    <footer class="pie">
+      <div class="contenedor pie__fila">
+        <p>
+          <img src="assets/icon.svg" alt="" width="20" height="20" />
+          Novelist · Hecha con cariño en España
+        </p>
+        <p><a href="#inicio">Volver arriba</a></p>
+      </div>
+    </footer>
+  </body>
+</html>
