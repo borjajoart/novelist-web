@@ -21,6 +21,13 @@ alternativo y dimensiones (sin saltos de diseño), carga diferida, política de 
 petición a terceros (sin fuentes externas ni analítica). JavaScript solo como mejora: destaca la descarga del sistema
 del visitante.
 
+## Diseño
+
+Mundo visual de página de libro: papel cálido y tinta. Tipografías Newsreader e Instrument Sans (licencia OFL, alojadas en
+`site/assets/fonts/`, sin peticiones a terceros). Se aplican las guías de [Impeccable](https://impeccable.style): sin etiquetas
+sobre los títulos, sin filas de tarjetas iguales ni bordes laterales de color, y un único momento animado (la muestra de
+estilo), que respeta `prefers-reduced-motion`.
+
 ## Desarrollo
 
 ```bash

@@ -13,8 +13,8 @@
       name="description"
       content="Novelist es una aplicación de escritorio gratuita para Windows y Mac para escribir libros: manuscrito, tarjetas, fichas de personajes, objetivos y exportación a Word, PDF y EPUB."
     />
-    <meta name="theme-color" content="#f7f2ea" media="(prefers-color-scheme: light)" />
-    <meta name="theme-color" content="#1c1814" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#f8f3ea" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#1b1612" media="(prefers-color-scheme: dark)" />
     <meta name="color-scheme" content="light dark" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="es_ES" />
@@ -32,6 +32,13 @@
     <link rel="icon" href="assets/icon.svg" type="image/svg+xml" />
     <link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png" />
     <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+    <link
+      rel="preload"
+      href="assets/fonts/newsreader-latin-opsz-normal.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
     <link rel="stylesheet" href="styles.css" />
     <script src="main.js" defer></script>
   </head>
@@ -57,21 +64,26 @@
 
     <main id="contenido">
       <section class="portada" id="inicio" aria-labelledby="titulo">
-        <div class="contenedor portada__rejilla">
-          <div class="portada__texto">
-            <p class="etiqueta">Gratis · Windows y Mac · Sin conexión</p>
-            <h1 id="titulo">Un lugar tranquilo para escribir tu libro</h1>
+        <div class="contenedor">
+          <h1 id="titulo">Un lugar <em>tranquilo</em> para escribir tu libro</h1>
+          <div class="portada__fila">
             <p class="entradilla">
               Novelist reúne el manuscrito, la planificación, los personajes y la exportación final en una sola
               aplicación. Escribe sin distracciones: todo se guarda solo y tus textos nunca salen de tu ordenador.
             </p>
-            <div class="acciones">
-              <a class="boton" href="#descargar" id="boton-principal">Descargar Novelist</a>
-              <a class="boton boton--secundario" href="#funciones">Ver qué puede hacer</a>
+            <div>
+              <div class="acciones">
+                <a class="boton" href="#descargar" id="boton-principal">Descargar Novelist</a>
+                <a class="boton boton--secundario" href="#funciones">Ver qué puede hacer</a>
+              </div>
+              <p class="nota-pequena" id="nota-sistema">
+                Gratis · Sin conexión · Versión 1.0.0 · Windows 10/11 y Mac (chip de Apple o Intel)
+              </p>
             </div>
-            <p class="nota-pequena" id="nota-sistema">Versión 1.0.0 · Windows 10/11 y Mac (chip de Apple o Intel)</p>
           </div>
-          <figure class="captura captura--portada">
+        </div>
+        <div class="portada__imagen">
+          <figure class="captura contenedor">
             <img
               src="assets/capturas/04-ventana-principal.jpg"
               width="1264"
@@ -83,16 +95,20 @@
         </div>
       </section>
 
-      <section class="seccion" id="funciones" aria-labelledby="funciones-titulo">
+      <section class="tinta apertura" id="funciones" aria-labelledby="funciones-titulo">
         <div class="contenedor">
           <h2 id="funciones-titulo">Todo lo que necesita un libro</h2>
           <p class="seccion__intro">
             Pensada para novelas, ensayos y memorias. Empieza con una plantilla o en blanco y ve dándole forma.
           </p>
+        </div>
+      </section>
 
-          <article class="funcion">
+      <div class="seccion seccion--con-tira">
+        <div class="contenedor">
+          <article class="funcion funcion--ancha">
+            <h3>Escribe con calma</h3>
             <div class="funcion__texto">
-              <h3>Escribe con calma</h3>
               <p>
                 Un editor limpio con el formato justo: títulos, cursivas, citas, listas, separadores de escena y sangría
                 de novela. El modo concentración oculta todo menos el texto, con la línea de escritura centrada y el
@@ -112,6 +128,42 @@
                 loading="lazy"
                 alt="Modo concentración: solo el texto en pantalla, con el párrafo actual destacado y el resto atenuado."
               />
+            </figure>
+          </article>
+
+          <article class="funcion">
+            <div class="funcion__texto">
+              <h3>Pule tu texto <span class="nuevo">nuevo en la 1.0</span></h3>
+              <p>
+                Corrector en español y sinónimos con un clic derecho, sin conexión. Activa las marcas de estilo y
+                Novelist te señala repeticiones cercanas, adverbios en «-mente», frases muy largas y tus propias
+                muletillas. Y para oír cómo suena, léelo en voz alta.
+              </p>
+              <ul class="lista-check">
+                <li>Corrector ortográfico y sinónimos</li>
+                <li>Marcas de estilo y muletillas personales</li>
+                <li>Lectura en voz alta y sprints de escritura</li>
+              </ul>
+            </div>
+            <figure class="muestra">
+              <p class="muestra__texto">
+                <span class="m-muletilla">De repente</span>, Marta no contestó. Miró el
+                <span class="m-repeticion">faro</span> <span class="m-adverbio">lentamente</span> y, por un instante, le
+                pareció ver una luz en lo alto del <span class="m-repeticion">faro</span>.
+                <span class="m-larga"
+                  >Elías la saludó desde la barca con un gesto torpe, con las manos llenas de redes y la mirada de quien
+                  conoce todos los secretos del pueblo, mientras el sol se escondía detrás del espigón y las gaviotas
+                  volvían despacio hacia las rocas.</span
+                >
+              </p>
+              <figcaption>
+                <ul class="leyenda">
+                  <li><span class="m-muletilla">Muletilla</span></li>
+                  <li><span class="m-adverbio">Adverbio en -mente</span></li>
+                  <li><span class="m-repeticion">Repetición</span></li>
+                  <li><span class="m-larga">Frase larga</span></li>
+                </ul>
+              </figcaption>
             </figure>
           </article>
 
@@ -141,6 +193,30 @@
 
           <article class="funcion">
             <div class="funcion__texto">
+              <h3>Tu historia en el tiempo <span class="nuevo">nuevo en la 1.0</span></h3>
+              <p>
+                Pon fecha a cada escena y mira la línea de tiempo: el orden en que ocurren las cosas, no en el que se
+                leen, con los saltos atrás marcados. Anota cómo se relacionan tus personajes y míralo en un mapa.
+              </p>
+              <ul class="lista-check">
+                <li>Línea de tiempo con flashbacks</li>
+                <li>Mapa de relaciones entre personajes</li>
+                <li>Plantillas: viaje del héroe, Save the Cat, siete puntos</li>
+              </ul>
+            </div>
+            <figure class="captura">
+              <img
+                src="assets/capturas/27-linea-tiempo.jpg"
+                width="1264"
+                height="735"
+                loading="lazy"
+                alt="Línea de tiempo: escenas agrupadas por día, una de ellas marcada como salto atrás."
+              />
+            </figure>
+          </article>
+
+          <article class="funcion funcion--invertida">
+            <div class="funcion__texto">
               <h3>Personajes, lugares e investigación</h3>
               <p>
                 Cada personaje y cada lugar tiene su ficha: apariencia, motivaciones, ambiente… Novelist te muestra en
@@ -163,7 +239,7 @@
             </figure>
           </article>
 
-          <article class="funcion funcion--invertida">
+          <article class="funcion">
             <div class="funcion__texto">
               <h3>Revisa sin miedo</h3>
               <p>
@@ -187,58 +263,7 @@
             </figure>
           </article>
 
-          <article class="funcion">
-            <div class="funcion__texto">
-              <p class="etiqueta">Nuevo en la 1.0</p>
-              <h3>Pule tu texto</h3>
-              <p>
-                Corrector en español y sinónimos con un clic derecho, sin conexión. Activa las marcas de estilo y
-                Novelist te señala repeticiones cercanas, adverbios en «-mente», frases muy largas y tus propias
-                muletillas. Y para oír cómo suena, léelo en voz alta.
-              </p>
-              <ul class="lista-check">
-                <li>Corrector ortográfico y sinónimos</li>
-                <li>Marcas de estilo y muletillas personales</li>
-                <li>Lectura en voz alta y sprints de escritura</li>
-              </ul>
-            </div>
-            <figure class="captura">
-              <img
-                src="assets/capturas/30-marcas-estilo.jpg"
-                width="1264"
-                height="735"
-                loading="lazy"
-                alt="Editor con marcas de estilo: una muletilla con subrayado doble, un adverbio con subrayado ondulado y palabras repetidas con subrayado punteado; abajo, el recuento."
-              />
-            </figure>
-          </article>
-
           <article class="funcion funcion--invertida">
-            <div class="funcion__texto">
-              <p class="etiqueta">Nuevo en la 1.0</p>
-              <h3>Tu historia en el tiempo</h3>
-              <p>
-                Pon fecha a cada escena y mira la línea de tiempo: el orden en que ocurren las cosas, no en el que se
-                leen, con los saltos atrás marcados. Anota cómo se relacionan tus personajes y míralo en un mapa.
-              </p>
-              <ul class="lista-check">
-                <li>Línea de tiempo con flashbacks</li>
-                <li>Mapa de relaciones entre personajes</li>
-                <li>Plantillas: viaje del héroe, Save the Cat, siete puntos</li>
-              </ul>
-            </div>
-            <figure class="captura">
-              <img
-                src="assets/capturas/27-linea-tiempo.jpg"
-                width="1264"
-                height="735"
-                loading="lazy"
-                alt="Línea de tiempo: escenas agrupadas por día, una de ellas marcada como salto atrás."
-              />
-            </figure>
-          </article>
-
-          <article class="funcion">
             <div class="funcion__texto">
               <h3>Del borrador al libro</h3>
               <p>
@@ -262,20 +287,11 @@
             </figure>
           </article>
 
-          <h3 class="galeria__titulo">Más funciones</h3>
-          <ul class="galeria">
-            <li>
-              <figure class="captura">
-                <img
-                  src="assets/capturas/13-esquema.jpg"
-                  width="1264"
-                  height="735"
-                  loading="lazy"
-                  alt="Esquema del manuscrito en forma de tabla."
-                />
-                <figcaption>Esquema del libro</figcaption>
-              </figure>
-            </li>
+          <h3 class="mas">Más funciones</h3>
+        </div>
+
+        <section class="tira" aria-label="Capturas de más funciones" tabindex="0">
+          <ul>
             <li>
               <figure class="captura">
                 <img
@@ -286,6 +302,18 @@
                   alt="Mapa de relaciones: Marta, Elías y Rosa unidos por líneas con etiquetas como «confía en» y «nieta de»."
                 />
                 <figcaption>Mapa de relaciones</figcaption>
+              </figure>
+            </li>
+            <li>
+              <figure class="captura">
+                <img
+                  src="assets/capturas/13-esquema.jpg"
+                  width="1264"
+                  height="735"
+                  loading="lazy"
+                  alt="Esquema del manuscrito en forma de tabla."
+                />
+                <figcaption>Esquema del libro</figcaption>
               </figure>
             </li>
             <li>
@@ -303,13 +331,13 @@
             <li>
               <figure class="captura">
                 <img
-                  src="assets/capturas/35-visita-guiada.jpg"
+                  src="assets/capturas/25-tema-oscuro.jpg"
                   width="1264"
                   height="735"
                   loading="lazy"
-                  alt="Visita guiada: el primer paso resalta el árbol del libro."
+                  alt="Novelist con el tema oscuro."
                 />
-                <figcaption>Visita guiada la primera vez</figcaption>
+                <figcaption>Tema oscuro</figcaption>
               </figure>
             </li>
             <li>
@@ -339,13 +367,13 @@
             <li>
               <figure class="captura">
                 <img
-                  src="assets/capturas/25-tema-oscuro.jpg"
+                  src="assets/capturas/35-visita-guiada.jpg"
                   width="1264"
                   height="735"
                   loading="lazy"
-                  alt="Novelist con el tema oscuro."
+                  alt="Visita guiada: el primer paso resalta el árbol del libro."
                 />
-                <figcaption>Tema oscuro</figcaption>
+                <figcaption>Visita guiada la primera vez</figcaption>
               </figure>
             </li>
             <li>
@@ -373,34 +401,34 @@
               </figure>
             </li>
           </ul>
-        </div>
-      </section>
+        </section>
+      </div>
 
-      <section class="seccion seccion--suave" id="seguridad" aria-labelledby="seguridad-titulo">
+      <section class="seccion tinta" id="seguridad" aria-labelledby="seguridad-titulo">
         <div class="contenedor">
           <h2 id="seguridad-titulo">Tus textos, a salvo</h2>
           <p class="seccion__intro">
             Lo más importante de un libro es no perderlo. Novelist está hecha con eso en mente.
           </p>
-          <ul class="tarjetas">
-            <li class="tarjeta">
+          <ul class="filas">
+            <li class="fila">
               <h3>Se guarda solo</h3>
               <p>
                 Unos instantes después de dejar de escribir. Y si el ordenador se apaga de golpe, recupera lo que
                 faltaba.
               </p>
             </li>
-            <li class="tarjeta">
+            <li class="fila">
               <h3>Copias automáticas</h3>
               <p>Al abrir, al cerrar y cada 15 minutos. Restaurar una copia guarda antes el estado actual.</p>
             </li>
-            <li class="tarjeta">
+            <li class="fila">
               <h3>En tu ordenador</h3>
               <p>
                 Sin cuentas ni nube. Solo consulta si hay versiones nuevas: nada de lo que escribes sale de tu equipo.
               </p>
             </li>
-            <li class="tarjeta">
+            <li class="fila">
               <h3>Fácil de llevar</h3>
               <p>Una copia completa en un solo archivo para guardarla aparte o abrirla en otro ordenador.</p>
             </li>
@@ -416,8 +444,10 @@
           </p>
           <ul class="descargas">
             <li class="descarga" data-sistema="windows">
-              <h3>Windows</h3>
-              <p>Windows 10 u 11 de 64 bits.</p>
+              <div class="descarga__texto">
+                <h3>Windows</h3>
+                <p>Windows 10 u 11 de 64 bits.</p>
+              </div>
               <a
                 class="boton"
                 href="https://github.com/borjajoart/novelist-web/releases/download/v1.0.0/Novelist-1.0.0-win-x64.exe"
@@ -426,8 +456,10 @@
               </a>
             </li>
             <li class="descarga" data-sistema="mac">
-              <h3>Mac con chip de Apple</h3>
-              <p>macOS 12 o posterior, con M1, M2, M3 o más reciente.</p>
+              <div class="descarga__texto">
+                <h3>Mac con chip de Apple</h3>
+                <p>macOS 12 o posterior, con M1, M2, M3 o más reciente.</p>
+              </div>
               <a
                 class="boton"
                 href="https://github.com/borjajoart/novelist-web/releases/download/v1.0.0/Novelist-1.0.0-mac-arm64.dmg"
@@ -436,8 +468,10 @@
               </a>
             </li>
             <li class="descarga" data-sistema="mac-intel">
-              <h3>Mac con procesador Intel</h3>
-              <p>macOS 12 o posterior. Lo ves en el menú Apple → Acerca de este Mac.</p>
+              <div class="descarga__texto">
+                <h3>Mac con procesador Intel</h3>
+                <p>macOS 12 o posterior. Lo ves en el menú Apple → Acerca de este Mac.</p>
+              </div>
               <a
                 class="boton"
                 href="https://github.com/borjajoart/novelist-web/releases/download/v1.0.0/Novelist-1.0.0-mac-x64.dmg"
@@ -455,7 +489,7 @@
               <a href="descargas/Guia-de-instalacion.pdf">guía de instalación</a>.
             </p>
           </div>
-          <p class="nota-pequena">
+          <p class="nota-pequena descargar__pie">
             Versiones anteriores y sumas de comprobación en
             <a href="https://github.com/borjajoart/novelist-web/releases">GitHub Releases</a>.
           </p>
@@ -467,7 +501,7 @@
           <h2 id="manuales-titulo">Manuales</h2>
           <ul class="manuales">
             <li class="manual">
-              <img src="assets/capturas/02-nuevo-proyecto.jpg" width="448" height="427" loading="lazy" alt="" />
+              <img src="assets/portada-guia.jpg" width="655" height="927" loading="lazy" alt="" />
               <div>
                 <h3>Guía de instalación</h3>
                 <p>
@@ -479,7 +513,7 @@
               </div>
             </li>
             <li class="manual">
-              <img src="assets/capturas/21-copias-seguridad.jpg" width="512" height="363" loading="lazy" alt="" />
+              <img src="assets/portada-manual.jpg" width="655" height="927" loading="lazy" alt="" />
               <div>
                 <h3>Manual de uso</h3>
                 <p>

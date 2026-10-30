@@ -86,3 +86,24 @@ test('sin errores en la consola', async ({ page }) => {
   await page.waitForLoadState('networkidle');
   expect(errors).toEqual([]);
 });
+
+test('las fuentes propias cargan y las marcas de la muestra aparecen al llegar a ella', async ({ page }) => {
+  await page.goto('/');
+  const loaded = await page.evaluate(async () => {
+    await document.fonts.ready;
+    return [document.fonts.check('300 48px Newsreader'), document.fonts.check('16px "Instrument Sans"')];
+  });
+  expect(loaded).toEqual([true, true]);
+  const sample = page.locator('.muestra');
+  await sample.scrollIntoViewIfNeeded();
+  await expect(sample).not.toHaveClass(/muestra--pendiente/);
+});
+
+test('sin JavaScript la muestra ya está marcada y las descargas funcionan', async ({ browser }) => {
+  const context = await browser.newContext({ javaScriptEnabled: false });
+  const page = await context.newPage();
+  await page.goto('/');
+  await expect(page.locator('.muestra')).not.toHaveClass(/muestra--pendiente/);
+  await expect(page.locator('.descarga a.boton')).toHaveCount(3);
+  await context.close();
+});
