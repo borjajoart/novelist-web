@@ -52,7 +52,7 @@ test('todas las imágenes, PDF y enlaces internos existen', async ({ page, reque
 test('los instaladores apuntan a la versión publicada', async ({ page }) => {
   await page.goto('/');
   const links = page.locator('.descarga a.boton');
-  await expect(links).toHaveCount(2);
+  await expect(links).toHaveCount(3);
   for (const href of await links.evaluateAll((as) => as.map((a) => a.getAttribute('href')))) {
     expect(href).toMatch(/^https:\/\/github\.com\/borjajoart\/novelist-web\/releases\/download\/v\d+\.\d+\.\d+\//);
   }

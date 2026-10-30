@@ -69,7 +69,7 @@
               <a class="boton" href="#descargar" id="boton-principal">Descargar Novelist</a>
               <a class="boton boton--secundario" href="#funciones">Ver qué puede hacer</a>
             </div>
-            <p class="nota-pequena" id="nota-sistema">Versión 0.1.0 · Windows 10/11 y Mac con chip de Apple</p>
+            <p class="nota-pequena" id="nota-sistema">Versión 1.0.0 · Windows 10/11 y Mac (chip de Apple o Intel)</p>
           </div>
           <figure class="captura captura--portada">
             <img
@@ -189,6 +189,57 @@
 
           <article class="funcion">
             <div class="funcion__texto">
+              <p class="etiqueta">Nuevo en la 1.0</p>
+              <h3>Pule tu texto</h3>
+              <p>
+                Corrector en español y sinónimos con un clic derecho, sin conexión. Activa las marcas de estilo y
+                Novelist te señala repeticiones cercanas, adverbios en «-mente», frases muy largas y tus propias
+                muletillas. Y para oír cómo suena, léelo en voz alta.
+              </p>
+              <ul class="lista-check">
+                <li>Corrector ortográfico y sinónimos</li>
+                <li>Marcas de estilo y muletillas personales</li>
+                <li>Lectura en voz alta y sprints de escritura</li>
+              </ul>
+            </div>
+            <figure class="captura">
+              <img
+                src="assets/capturas/30-marcas-estilo.jpg"
+                width="1264"
+                height="735"
+                loading="lazy"
+                alt="Editor con marcas de estilo: una muletilla con subrayado doble, un adverbio con subrayado ondulado y palabras repetidas con subrayado punteado; abajo, el recuento."
+              />
+            </figure>
+          </article>
+
+          <article class="funcion funcion--invertida">
+            <div class="funcion__texto">
+              <p class="etiqueta">Nuevo en la 1.0</p>
+              <h3>Tu historia en el tiempo</h3>
+              <p>
+                Pon fecha a cada escena y mira la línea de tiempo: el orden en que ocurren las cosas, no en el que se
+                leen, con los saltos atrás marcados. Anota cómo se relacionan tus personajes y míralo en un mapa.
+              </p>
+              <ul class="lista-check">
+                <li>Línea de tiempo con flashbacks</li>
+                <li>Mapa de relaciones entre personajes</li>
+                <li>Plantillas: viaje del héroe, Save the Cat, siete puntos</li>
+              </ul>
+            </div>
+            <figure class="captura">
+              <img
+                src="assets/capturas/27-linea-tiempo.jpg"
+                width="1264"
+                height="735"
+                loading="lazy"
+                alt="Línea de tiempo: escenas agrupadas por día, una de ellas marcada como salto atrás."
+              />
+            </figure>
+          </article>
+
+          <article class="funcion">
+            <div class="funcion__texto">
               <h3>Del borrador al libro</h3>
               <p>
                 Exporta el manuscrito a Word, PDF listo para imprimir, EPUB, Markdown o texto. Elige portada, página de
@@ -223,6 +274,42 @@
                   alt="Esquema del manuscrito en forma de tabla."
                 />
                 <figcaption>Esquema del libro</figcaption>
+              </figure>
+            </li>
+            <li>
+              <figure class="captura">
+                <img
+                  src="assets/capturas/29-mapa-relaciones.jpg"
+                  width="768"
+                  height="625"
+                  loading="lazy"
+                  alt="Mapa de relaciones: Marta, Elías y Rosa unidos por líneas con etiquetas como «confía en» y «nieta de»."
+                />
+                <figcaption>Mapa de relaciones</figcaption>
+              </figure>
+            </li>
+            <li>
+              <figure class="captura">
+                <img
+                  src="assets/capturas/33-sprint-resultado.jpg"
+                  width="448"
+                  height="441"
+                  loading="lazy"
+                  alt="Resultado de un sprint de escritura con las palabras escritas y el objetivo."
+                />
+                <figcaption>Sprints de escritura</figcaption>
+              </figure>
+            </li>
+            <li>
+              <figure class="captura">
+                <img
+                  src="assets/capturas/35-visita-guiada.jpg"
+                  width="1264"
+                  height="735"
+                  loading="lazy"
+                  alt="Visita guiada: el primer paso resalta el árbol del libro."
+                />
+                <figcaption>Visita guiada la primera vez</figcaption>
               </figure>
             </li>
             <li>
@@ -309,7 +396,9 @@
             </li>
             <li class="tarjeta">
               <h3>En tu ordenador</h3>
-              <p>Sin cuentas, sin nube y sin conexión. Nada de lo que escribes sale de tu equipo.</p>
+              <p>
+                Sin cuentas ni nube. Solo consulta si hay versiones nuevas: nada de lo que escribes sale de tu equipo.
+              </p>
             </li>
             <li class="tarjeta">
               <h3>Fácil de llevar</h3>
@@ -322,26 +411,38 @@
       <section class="seccion" id="descargar" aria-labelledby="descargar-titulo">
         <div class="contenedor">
           <h2 id="descargar-titulo">Descargar Novelist</h2>
-          <p class="seccion__intro">Versión 0.1.0. Gratuita, en español y sin anuncios.</p>
+          <p class="seccion__intro">
+            Versión 1.0.0. Gratuita, en español y sin anuncios. A partir de ahora avisa sola de las versiones nuevas.
+          </p>
           <ul class="descargas">
             <li class="descarga" data-sistema="windows">
               <h3>Windows</h3>
               <p>Windows 10 u 11 de 64 bits.</p>
               <a
                 class="boton"
-                href="https://github.com/borjajoart/novelist-web/releases/download/v0.1.0/Novelist-0.1.0-win-x64.exe"
+                href="https://github.com/borjajoart/novelist-web/releases/download/v1.0.0/Novelist-1.0.0-win-x64.exe"
               >
                 Descargar para Windows<span class="boton__detalle">.exe · 129 MB</span>
               </a>
             </li>
             <li class="descarga" data-sistema="mac">
-              <h3>Mac</h3>
-              <p>macOS 12 o posterior, con chip de Apple (M1 o más reciente).</p>
+              <h3>Mac con chip de Apple</h3>
+              <p>macOS 12 o posterior, con M1, M2, M3 o más reciente.</p>
               <a
                 class="boton"
-                href="https://github.com/borjajoart/novelist-web/releases/download/v0.1.0/Novelist-0.1.0-mac-arm64.dmg"
+                href="https://github.com/borjajoart/novelist-web/releases/download/v1.0.0/Novelist-1.0.0-mac-arm64.dmg"
               >
-                Descargar para Mac<span class="boton__detalle">.dmg · 146 MB</span>
+                Descargar para Mac (Apple)<span class="boton__detalle">.dmg · 147 MB</span>
+              </a>
+            </li>
+            <li class="descarga" data-sistema="mac-intel">
+              <h3>Mac con procesador Intel</h3>
+              <p>macOS 12 o posterior. Lo ves en el menú Apple → Acerca de este Mac.</p>
+              <a
+                class="boton"
+                href="https://github.com/borjajoart/novelist-web/releases/download/v1.0.0/Novelist-1.0.0-mac-x64.dmg"
+              >
+                Descargar para Mac (Intel)<span class="boton__detalle">.dmg · 150 MB</span>
               </a>
             </li>
           </ul>
@@ -354,6 +455,10 @@
               <a href="descargas/Guia-de-instalacion.pdf">guía de instalación</a>.
             </p>
           </div>
+          <p class="nota-pequena">
+            Versiones anteriores y sumas de comprobación en
+            <a href="https://github.com/borjajoart/novelist-web/releases">GitHub Releases</a>.
+          </p>
         </div>
       </section>
 
@@ -369,7 +474,7 @@
                   Paso a paso para Windows y Mac, qué hacer con los avisos de seguridad y dónde se guardan tus libros.
                 </p>
                 <a class="enlace-descarga" href="descargas/Guia-de-instalacion.pdf" download>
-                  Descargar la guía de instalación<span class="boton__detalle">PDF · 9 páginas · 165 KB</span>
+                  Descargar la guía de instalación<span class="boton__detalle">PDF · 9 páginas · 167 KB</span>
                 </a>
               </div>
             </li>
@@ -378,11 +483,11 @@
               <div>
                 <h3>Manual de uso</h3>
                 <p>
-                  Todas las funciones explicadas con capturas: escribir, organizar, revisar, exportar y copias de
-                  seguridad.
+                  Todas las funciones explicadas con capturas: escribir, organizar, revisar el estilo, línea de tiempo,
+                  exportar y copias de seguridad.
                 </p>
                 <a class="enlace-descarga" href="descargas/Manual-de-Novelist.pdf" download>
-                  Descargar el manual de uso<span class="boton__detalle">PDF · 28 páginas · 2,0 MB</span>
+                  Descargar el manual de uso<span class="boton__detalle">PDF · 36 páginas · 2,5 MB</span>
                 </a>
               </div>
             </li>
@@ -400,7 +505,8 @@
           <details>
             <summary>¿Necesito internet o una cuenta?</summary>
             <p>
-              No. Funciona sin conexión y no pide registrarse. Tus libros se guardan en la carpeta Documentos/Novelist.
+              No. Funciona sin conexión y no pide registrarse. Solo se conecta para comprobar si hay una versión nueva
+              (se puede desactivar). Tus libros se guardan en la carpeta Documentos/Novelist.
             </p>
           </details>
           <details>
@@ -413,7 +519,15 @@
           <details>
             <summary>¿Funciona en un Mac con procesador Intel?</summary>
             <p>
-              Esta descarga es para Mac con chip de Apple. La versión para Intel llegará con la próxima publicación.
+              Sí. Descarga la versión «Mac con procesador Intel». Si no sabes cuál es el tuyo, mira en el menú Apple →
+              Acerca de este Mac: si pone «Chip Apple», usa la otra.
+            </p>
+          </details>
+          <details>
+            <summary>¿Cómo se actualiza?</summary>
+            <p>
+              En Windows, sola: descarga la versión nueva y la instala al cerrar. En Mac te avisa y te lleva a la
+              descarga, porque macOS no deja que una aplicación sin firmar se actualice sola. Tus libros nunca se tocan.
             </p>
           </details>
           <details>
